@@ -1,0 +1,76 @@
+
+# ==============================
+# Environment variables / Secrets
+# ==============================
+.env
+.env.*
+!.env.example
+
+# ==============================
+# Java / Maven / Spring Boot
+# ==============================
+target/
+*.class
+*.jar
+!mvnw
+!mvnw.cmd
+!.mvn/wrapper/maven-wrapper.jar
+
+# ==============================
+# React / Node.js
+# ==============================
+node_modules/
+dist/
+build/
+coverage/
+.npm/
+
+# ==============================
+# IDEs
+# ==============================
+.idea/
+*.iws
+*.iml
+*.ipr
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+.apt_generated/
+.vscode/
+nbproject/private/
+.nbbuild/
+.nb-dist/
+.nb-gradle/
+
+# ==============================
+# Logs
+# ==============================
+*.log
+logs/
+
+# ==============================
+# OS files
+# ==============================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==============================
+# Local database / backups
+# ==============================
+mysql-data/
+data/
+*.sql.gz
+*.dump
+
+# ==============================
+# Temporary files
+# ==============================
+*.tmp
+*.swp
+*.bak
+HELP.md
+
