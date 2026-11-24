@@ -1,6 +1,7 @@
 package com.ateeb.patient_admission_management_system.controller;
 
 import com.ateeb.patient_admission_management_system.dto.request.CreatePatientRequest;
+import com.ateeb.patient_admission_management_system.dto.request.UpdatePatientRequest;
 import com.ateeb.patient_admission_management_system.dto.response.PatientResponse;
 import com.ateeb.patient_admission_management_system.enums.Department;
 import com.ateeb.patient_admission_management_system.enums.Doctor;
@@ -42,5 +43,27 @@ public class PatientController {
                 department,
                 doctor
         ));
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<PatientResponse> updatePatient(
+            @PathVariable long id,
+            @Valid @RequestBody UpdatePatientRequest request
+    ){
+        return ResponseEntity.ok(patientService.updatePatient(id, request));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletePatient(@PathVariable Long id) {
+        patientService.deletePatient(id);
+
+        return ResponseEntity.noContent().build();
+    }
+
+    @PatchMapping("/{id}/discharge")
+    public ResponseEntity<PatientResponse> dischargePatient(@PathVariable Long id) {
+        return ResponseEntity.ok(
+                patientService.dischargePatient(id)
+        );
     }
 }

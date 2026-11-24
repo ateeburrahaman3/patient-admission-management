@@ -43,6 +43,17 @@ public class GlobalExceptionHandler {
         );
     }
 
+    @ExceptionHandler(PatientNotFoundException.class)
+    public ResponseEntity<ApiErrorResponse> handlePatientNotFound(PatientNotFoundException ex){
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(
+                new ApiErrorResponse(
+                        HttpStatus.NOT_FOUND.value(),
+                        ex.getMessage(),
+                        Map.of()
+                )
+        );
+    }
+
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ApiErrorResponse> handleException(Exception ex){
         log.error("Unexpected server error", ex);
