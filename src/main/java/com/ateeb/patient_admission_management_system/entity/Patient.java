@@ -47,4 +47,17 @@ public class Patient {
     @Column(nullable = false)
     private PatientStatus patientStatus;
 
+
+    //Constructor
+
+    public Patient(String name, Integer age, Gender gender, Ward ward, Department department, Doctor doctor, LocalDate admissionDate, PatientStatus patientStatus) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.ward = ward;
+        this.department = department;
+        this.doctor = doctor;
+        this.admissionDate = admissionDate;
+        this.patientStatus = patientStatus;
+    }
 }
