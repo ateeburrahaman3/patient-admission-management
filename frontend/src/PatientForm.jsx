@@ -179,8 +179,11 @@ function PatientForm({ onPatientAdded ,onPatientUpdated, editingPatient}) {
                     <option value="DR_C">Dr C</option>
                 </select>
 
+                <label htmlFor="admissionDate">Admission Date</label>
+
                 <input
                     type="date"
+                    id="admissionDate"
                     name="admissionDate"
                     value={formData.admissionDate}
                     onChange={handleChange}
