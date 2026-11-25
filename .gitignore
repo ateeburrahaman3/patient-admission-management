@@ -74,3 +74,9 @@ data/
 *.bak
 HELP.md
 
+
+# Local IDE configuration
+.run/
+
+# Personal database backup
+patient_admission_backup.sql
